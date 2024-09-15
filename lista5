@@ -1,0 +1,36 @@
+exercicio1
+#include <stdio.h>
+
+int main() {
+    float notas[20];
+    float soma = 0.0, media;
+    int count = 0;
+
+    // Leitura das notas
+    for (int i = 0; i < 20; i++) {
+        printf("Digite a nota do aluno %d: ", i + 1);
+        scanf("%f", &notas[i]);
+        soma += notas[i];
+    }
+
+    // Cálculo da média
+    media = soma / 20;
+
+    // Contagem de alunos com notas acima da média
+    for (int i = 0; i < 20; i++) {
+        if (notas[i] > media) {
+            count++;
+        }
+    }
+
+    // Saída dos resultados
+    printf("Média da turma: %.2f\n", media);
+    printf("Número de alunos com nota acima da média: %d\n", count);
+
+    return 0;
+}
+
+
+
+
+
